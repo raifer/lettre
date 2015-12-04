@@ -1,0 +1,40 @@
+\documentclass[12pt]{lettre}
+
+%package 
+\usepackage[frenchb]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{eurosym} % signe euro avec \euro
+\usepackage{numprint}
+
+% déclaration commande no rule
+\makeatletter
+\newcommand*{\norule}{\renewcommand*{\rule@length}{0}}
+\makeatother
+
+\begin{document}
+\input{corps} % on récupère les commandes de la lettre
+ \begin{letter}{\destinataire} 
+
+% mise en page de la lettre
+\norule % Pas de marque de pliage
+%\parindent=5mm % indentation des paragraphe
+\marge{-5mm} % marge du texte à gauche
+%\francais % insertion de label et closing en pleine largeur
+%\def\concname{Objet :~} % On redéfinit ici la commande 'objet'
+\makeatletter
+
+% La lettre
+\conc{\objet}
+\opening{\ouverture}
+\corps
+\closing{\fermeture}
+\end{letter}
+\end{document}
+
+
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: t
+%%% End: 
