@@ -15,7 +15,7 @@ lettre.pdf : lettre.tex
 
 # text file
 lettre.txt : lettre.pdf
-	pdftotext lettre.pdf
+	pdftotext -layout lettre.pdf
 
 view:
 	evince lettre.pdf &
