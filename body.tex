@@ -1,3 +1,8 @@
+% Date
+% Date du jour par défaut.
+% \nodate pour pas de date.
+%\date{date envoi}                       
+
 % destinataire
 \newcommand{\destinataire}{\input{contact/%
 default
@@ -25,7 +30,11 @@ Madame, Monsieur,
 mes salutations distinguées.
 }
 
-%\ps{}
+% Après signature
+\newcommand{\apressignature}{
+%\ps
+%\ps{PS :~}{texte}
+}
 %\cc{nom des autres destinataires}
 %\encl{pièces jointes}
 
